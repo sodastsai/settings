@@ -18,7 +18,7 @@ alias vi='vim'
 # Functions ------------------------------------------------------------------------------------------------------------
 randomHex() {
     LEN=${1:-32}
-    python -c "import base64,math,os;print(base64.b16encode(os.urandom(int(math.ceil(${LEN}/2.0)))).lower()[:${LEN}])"
+    python -c "import base64,math,os;print(base64.b16encode(os.urandom(int(math.ceil(${LEN}/2.0)))).decode(\"utf-8\").lower()[:${LEN}])"
 }
 alias random64Hex='randomHex 64'
 
