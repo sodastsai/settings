@@ -37,9 +37,11 @@ source ~/.git-completion.bash
 complete -C aws_completer aws
 
 # Swift ----------------------------------------------------------------------------------------------------------------
+export SWIFTENV_ROOT=/usr/local/var/swiftenv
 eval "$(swiftenv init -)"
 
 # Python ---------------------------------------------------------------------------------------------------------------
+export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
